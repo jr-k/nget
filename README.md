@@ -12,12 +12,12 @@ Expose files from a Docker container via temporary HTTP links for easy download.
 
 **With host network (simpler, recommended):**
 ```bash
-docker run -it --rm --network host -v /path/to/data:/data nget
+docker run -it --rm --network host -v /path/to/data:/data ghcr.io/jr-k/nget
 ```
 
 **With port mapping:**
 ```bash
-docker run -it --rm -p 33000-33100:33000-33100 -v /path/to/data:/data nget
+docker run -it --rm -p 33000-33100:33000-33100 -v /path/to/data:/data ghcr.io/jr-k/nget
 ```
 
 ### Usage
