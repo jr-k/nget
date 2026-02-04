@@ -8,7 +8,10 @@ FROM alpine:latest
 
 # Install minimal dependencies
 # - curl: for fetching public IP
-RUN apk add --no-cache curl
+# - nano: text editor (also provides pico-like interface)
+# - vim: text editor (also provides vi)
+# - emacs: text editor
+RUN apk add --no-cache curl nano vim emacs
 
 # Copy binaries
 COPY --from=builder /build/nget-server /usr/local/bin/nget-server
