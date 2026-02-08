@@ -11,7 +11,8 @@ FROM alpine:latest
 # - nano: text editor (also provides pico-like interface)
 # - vim: text editor (also provides vi)
 # - emacs: text editor
-RUN apk add --no-cache curl nano vim emacs
+# - sqlite: lightweight database
+RUN apk add --no-cache curl nano vim emacs sqlite
 
 # Copy binaries
 COPY --from=builder /build/nget-server /usr/local/bin/nget-server
