@@ -12,7 +12,8 @@ FROM alpine:latest
 # - vim: text editor (also provides vi)
 # - emacs: text editor
 # - sqlite: lightweight database
-RUN apk add --no-cache curl nano vim emacs sqlite
+RUN apk add --no-cache curl nano vim emacs sqlite \
+    busybox-extras bind-tools nmap
 
 # Copy binaries
 COPY --from=builder /build/nget-server /usr/local/bin/nget-server
